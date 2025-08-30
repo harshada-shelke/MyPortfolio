@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<style>
+    /* Reset and basic styling */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #0f0f0f; color: white; overflow-x: hidden; }
+
+    /* Hero Section */
+    header {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #e873d0, #7a7ac2);
+        text-align: center;
+        animation: gradient 8s ease infinite;
+        background-size: 400% 400%;
+    }
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    header h1 { font-size: 3.5rem; animation: fadeInUp 1.5s ease; }
+    header p { font-size: 1.2rem; animation: fadeInUp 2s ease; opacity: 0.8; }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* About Section */
+    section {
+        padding: 60px 10%;
+    }
+    h2 {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    h2::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #ff00cc;
+        margin: 10px auto 0;
+    }
+    p {
+        text-align: center;
+        line-height: 1.6;
+        font-size: 1.1rem;
+    }
+
+    /* Skills */
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .skill {
+        background: #1c1c1c;
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .skill:hover {
+        transform: scale(1.1);
+        background: #ff00cc;
+    }
+
+    /* Projects */
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .project {
+        background: #1c1c1c;
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.3s ease;
+    }
+    .project:hover {
+        transform: translateY(-5px);
+        background: #ff00cc;
+    }
+    .project img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    /* Contact */
+    .contact {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .contact a {
+        color: white;
+        padding: 12px 25px;
+        background: #ff00cc;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+    .contact a:hover {
+        background: #3333ff;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #111;
+        font-size: 0.9rem;
+        color: #aaa;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Hi, I'm Harshada</h1>
+    <p>AI/ML Engineer • Web Developer • Student</p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>I'm a passionate ML Student. I am specialize in AI/ML, and have learnt various languages such as C, C++, PYTHON , HTML, JAVA,etc.</p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">C++</div>
+        <div class="skill">AI/ML</div>
+    </div>
+</section>
+
+<section>
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <img src="https://via.placeholder.com/300" alt="Project 1 ">
+            <h3><br>Portfolio Website</h3>
+            <p>A responsive and animated personal portfolio.</p>
+        </div>
+        <div class="project">
+            <img src="https://via.placeholder.com/300" alt="Project 2 ">
+            <h3><br>AI Assistant</h3>
+            <p>An AI-powered chatbot for daily assistance.</p>
+        </div>
+        <div class="project">
+            <img src="https://via.placeholder.com/300" alt="Project 3 ">
+            <h3><br>Weather App</h3>
+            <p>A real-time weather forecast web application.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact Me</h2>
+    <a href="mailto:youremail@example.com">Send Email</a>
+</section>
+
+<footer>
+    &copy; 2025 Harshada Shelke | All Rights Reserved
+</footer>
+
+</body>
+</html>
